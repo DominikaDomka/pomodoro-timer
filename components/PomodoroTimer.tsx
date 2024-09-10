@@ -112,25 +112,25 @@ const PomodoroTimer: React.FC = () => {
   return (
     <div className="flex flex-col items-center w-64 p-2 bg-transparent">
       <TomatoSVG fillPercentage={fillPercentage} message={message} />
-      <div className="text-3xl font-bold mb-1">{formatTime(timeLeft)}</div>
-      <div className="text-sm mb-2">{isWorking ? 'Work Time' : 'Break Time'}</div>
-      <div className="text-xs mb-2">Cycle: {cycleCount + 1} / 4</div>
+      <div className="text-3xl font-bold mb-1 text-gray-800">{formatTime(timeLeft)}</div>
+      <div className="text-sm mb-2 text-gray-600">{isWorking ? 'Work Time' : 'Break Time'}</div>
+      <div className="text-xs mb-2 text-gray-500">Cycle: {cycleCount + 1} / 4</div>
       <div className="flex space-x-2 mb-4">
         <button
-          className="bg-green-500 text-white px-4 py-2 rounded"
+          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors duration-150"
           onClick={toggleTimer}
         >
           {isActive ? 'Pause' : 'Start'}
         </button>
         <button
-          className="bg-red-500 text-white px-4 py-2 rounded"
+          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition-colors duration-150"
           onClick={resetTimer}
         >
           Reset
         </button>
       </div>
       <select
-        className="w-full p-2 border rounded"
+        className="w-full p-2 border rounded text-gray-700 bg-white"
         value={sessionType}
         onChange={(e) => handleSessionTypeChange(e.target.value as SessionType)}
       >
