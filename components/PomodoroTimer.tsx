@@ -117,16 +117,16 @@ const PomodoroTimer: React.FC = () => {
       <div className="text-xs mb-2 text-gray-500">Cycle: {cycleCount + 1} / 4</div>
       <div className="flex space-x-2 mb-4">
         <button
-          className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded transition-colors duration-150"
+          className="bg-green-500 hover:bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150"
           onClick={toggleTimer}
         >
-          {isActive ? 'Pause' : 'Start'}
+          {isActive ? '⏸' : '▶'}
         </button>
         <button
-          className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition-colors duration-150"
+          className="bg-red-500 hover:bg-red-600 text-white w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-150"
           onClick={resetTimer}
         >
-          Reset
+          ↺
         </button>
       </div>
       <select
