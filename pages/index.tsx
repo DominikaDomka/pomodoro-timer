@@ -3,7 +3,7 @@ import PomodoroTimer from '../components/PomodoroTimer';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <PomodoroTimer />
     </div>
   );
